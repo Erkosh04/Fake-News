@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 import pickle
 import os
 
-df = pd.read_csv("data/fake_labeled.csv")
+df = pd.read_csv("data/fake_real_sample.csv")
 
 X = df["text"]
 y = df["label"]
@@ -22,3 +22,4 @@ os.makedirs("model", exist_ok=True)
 
 with open("model/model.pkl", "wb") as f:
     pickle.dump((model, vectorizer), f)
+
